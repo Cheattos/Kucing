@@ -2,126 +2,127 @@ import java.util.Scanner;
 
 public class mian {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int jawaban;
         int jm;
         int jMakanan;
-        String larilagi;
+        int larilagi;
         int pilihan;
         int pil;
-
+        boolean balik = true;
 
         cat c = new cat("Badak");
         Scanner key = new Scanner(System.in);
         c.cetak();
 
-        //System.out.println("Aing mulai Lari ");
-        System.out.println("Lakukan perintah untuk kucing");
-        System.out.println("1. Lari");
-        System.out.println("2. Jalan");
-        System.out.println("3. Diam ");
-        System.out.print("Masukkan pilihan : ");
-        pilihan = key.nextInt();
-        if(pilihan == 1){
-            System.out.print("Masukkan Jumlah Putaran Lari : ");
-            jm = key.nextInt();
-            c.run(jm);
-            c.sisaStamina();
-            System.out.println("1 = ya | 0 = tidak");
-            System.out.print("apakah ingin memberi makan? 1/0 : ");
-            jawaban = key.nextInt();
-            if(jawaban == 1){
-                System.out.println("Pilih makanan ");
-                System.out.println("1. Wiskas = +12 stamina");
-                System.out.println("2. Daging = +5  stamina");
-                System.out.println("3. Tulang = +2  stamina");
-                jMakanan = key.nextInt();
-                if(jMakanan == 1){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan1(pil);
-                }else if( jMakanan == 2){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan2(pil);
-                }else if( jMakanan == 3){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan3(pil);
+        while (balik == true) {
+            //System.out.println("Aing mulai Lari ");
+            System.out.println("Lakukan perintah untuk kucing");
+            System.out.println("1. Lari");
+            System.out.println("2. Jalan");
+            System.out.println("3. Diam ");
+            System.out.print("Masukkan pilihan : ");
+            pilihan = key.nextInt();
+            if (pilihan == 1) {
+                System.out.print("Masukkan Jumlah Putaran Lari : ");
+                jm = key.nextInt();
+                c.run(jm);
+                c.sisaStamina();
+                System.out.println("1 = ya | 0 = tidak");
+                System.out.print("apakah ingin memberi makan? 1/0 : ");
+                jawaban = key.nextInt();
+                if (jawaban == 1) {
+                    System.out.println("Pilih makanan ");
+                    System.out.println("1. Wiskas = +12 stamina");
+                    System.out.println("2. Daging = +5  stamina");
+                    System.out.println("3. Tulang = +2  stamina");
+                    jMakanan = key.nextInt();
+                    if (jMakanan == 1) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan1(pil);
+                    } else if (jMakanan == 2) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan2(pil);
+                    } else if (jMakanan == 3) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan3(pil);
+                    }
+                }
+            } else if (pilihan == 2) {
+                System.out.print("Masukkan Jumlah Putaran Jalan : ");
+                jm = key.nextInt();
+                c.walk(jm);
+                c.sisaStamina();
+                System.out.println("1 = ya | 0 = tidak");
+                System.out.print("apakah ingin memberi makan? 1/0 : ");
+                jawaban = key.nextInt();
+                if (jawaban == 1) {
+                    System.out.println("Pilih makanan ");
+                    System.out.println("1. Wiskas = +12 stamina");
+                    System.out.println("2. Daging = +5  stamina");
+                    System.out.println("3. Tulang = +2  stamina");
+                    jMakanan = key.nextInt();
+                    if (jMakanan == 1) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan1(pil);
+                    } else if (jMakanan == 2) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan2(pil);
+                    } else if (jMakanan == 3) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan3(pil);
+                    }
+                }
+            } else if (pilihan == 3) {
+                System.out.println("Aku Diam ");
+                c.sisaStamina();
+                System.out.println("1 = ya | 0 = tidak");
+                System.out.print("apakah ingin memberi makan? 1/0 : ");
+                jawaban = key.nextInt();
+                if (jawaban == 1) {
+                    System.out.println("Pilih makanan ");
+                    System.out.println("1. Wiskas = +12 stamina");
+                    System.out.println("2. Daging = +5  stamina");
+                    System.out.println("3. Tulang = +2  stamina");
+                    jMakanan = key.nextInt();
+                    if (jMakanan == 1) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan1(pil);
+                    } else if (jMakanan == 2) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan2(pil);
+                    } else if (jMakanan == 3) {
+                        System.out.print("Masukkan jumlah makanan :");
+                        pil = key.nextInt();
+                        c.makan3(pil);
+                    }
                 }
             }
-        }else if(pilihan ==2){
-            System.out.print("Masukkan Jumlah Putaran Jalan : ");
-            jm = key.nextInt();
-            c.walk(jm);
+
+
+            //c.run(10);
             c.sisaStamina();
+
             System.out.println("1 = ya | 0 = tidak");
-            System.out.print("apakah ingin memberi makan? 1/0 : ");
-            jawaban = key.nextInt();
-            if(jawaban == 1){
-                System.out.println("Pilih makanan ");
-                System.out.println("1. Wiskas = +12 stamina");
-                System.out.println("2. Daging = +5  stamina");
-                System.out.println("3. Tulang = +2  stamina");
-                jMakanan = key.nextInt();
-                if(jMakanan == 1){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan1(pil);
-                }else if( jMakanan == 2){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan2(pil);
-                }else if( jMakanan == 3){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan3(pil);
-                }
+            System.out.println("Anda ingin menyuruh kucing ini  lagi? 1/0");
+            larilagi = key.nextInt();
+            if (larilagi == 1) {
+                balik = true;
+            }else{
+                break;
             }
-        }else if(pilihan == 3){
-            System.out.println("Aku Diam ");
-            c.sisaStamina();
-            System.out.println("1 = ya | 0 = tidak");
-            System.out.print("apakah ingin memberi makan? 1/0 : ");
-            jawaban = key.nextInt();
-            if(jawaban == 1){
-                System.out.println("Pilih makanan ");
-                System.out.println("1. Wiskas = +12 stamina");
-                System.out.println("2. Daging = +5  stamina");
-                System.out.println("3. Tulang = +2  stamina");
-                jMakanan = key.nextInt();
-                if(jMakanan == 1){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan1(pil);
-                }else if( jMakanan == 2){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan2(pil);
-                }else if( jMakanan == 3){
-                    System.out.print("Masukkan jumlah makanan :");
-                    pil = key.nextInt();
-                    c.makan3(pil);
-                }
-            }
-        }
+            //System.out.println("Sayang sekali, tapi Kucingnya udah mager. ");
 
 
-
-
-        //c.run(10);
-        c.sisaStamina();
-
-           System.out.println("1 = ya | 0 = tidak");
-            System.out.print("Anda ingin menyuruh kucing ini  lagi? 1/0");
-            larilagi = key.nextLine();
-            if (larilagi == "y") {
-                System.out.println("Sayang sekali, tapi Kucingnya udah mager. ");
-            }
-
-
-
+    }
         System.out.print("Terimakasih ya sudah bermain");
     }
-
-}
+    }
