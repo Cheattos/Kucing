@@ -17,7 +17,7 @@ public class cat {
 
     public void run(int stamina){
         for(int i=0; i<stamina;i++) {
-            if (this.stamina == 0) {
+            if (this.stamina <= 0) {
                 System.out.println("aing capek homan!");
             } else {
                 System.out.println("masih kuat");
@@ -28,7 +28,7 @@ public class cat {
 
     public void walk(int stamina){
         for(int i=0; i<stamina;i++) {
-            if (this.stamina == 0) {
+            if (this.stamina <= 0) {
                 System.out.println("aing capek homan!");
             } else {
                 System.out.println("masih kuat");
@@ -39,7 +39,7 @@ public class cat {
 
     public void stay(int stamina){
         for(int i=0; i<stamina;i++) {
-            if (this.stamina == 0) {
+            if (this.stamina <= 0) {
                 System.out.println("aing capek homan!");
             } else {
                 System.out.println("masih kuat");
